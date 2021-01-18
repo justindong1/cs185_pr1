@@ -1,0 +1,33 @@
+.navbar-entry {
+    color: white;  
+    padding-bottom: 20px; 
+    font-size: 20px;
+}
+
+.entry1 {
+    padding-left: 1%;
+}
+
+.entry {
+    padding-left: 3%;
+}
+
+.navbar-address {
+    text-decoration: none;
+    color: white; 
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 4fr 20fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.grid-item {
+    border: 1px solid; 
+    padding: 1px;
+}
+
+.header {
+    font-weight: bold;
+}

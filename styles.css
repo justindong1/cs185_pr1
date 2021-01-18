@@ -1,0 +1,18 @@
+.navbar-entry {
+    color: white;  
+    padding-bottom: 20px; 
+    font-size: 20px;
+}
+
+.entry1 {
+    padding-left: 1%;
+}
+
+.entry {
+    padding-left: 3%;
+}
+
+a {
+    text-decoration: none;
+    color: white; 
+}
