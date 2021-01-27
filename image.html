@@ -8,35 +8,58 @@
     <body>
         <div class="navbar" style="clear: both; height:50px; width:100%; background-color:grey; display: flex;">
             <h1 class="navbar-entry entry1"><a href="text.html">Text</a></h1>
-            <h1 class="navbar-entry entry"><a href="image.html">Image</a></h1>
+            <h1 class="navbar-entry entry current"><a href="image.html">Image</a></h1>
             <h1 class="navbar-entry entry"><a href="video.html">Video</a></h1>
             <h1 class="navbar-entry entry"><a href="table.html">Table</a></h1>
+            <h1 class="navbar-entry entry"><a href="email.html">Email</a></h1>
         </div>
-        <div id="banner" style="padding-left: 5px; padding-top: 10px;">
-            <div class="inline-block">
-                <img src="./images/img1.jpg">
-            </div>
-        
-            <div class="inline-block image">
-                <img src="./images/img2.jpg">
-            </div>
-        
-            <div class="inline-block image">
-                <img src="./images/img3.jpg">
-            </div>
+        <div class="grid-container">
+            <div class="grid-item"><img onclick="document.getElementById('modal').style.display='block';document.getElementById('modal_img').src=this.src;" id="img1" src="./images/img1.jpg"></div>
+            <div class="grid-item"><img onclick="document.getElementById('modal').style.display='block';document.getElementById('modal_img').src=this.src;" id="img2" src="./images/img2.jpg"></div>
+            <div class="grid-item"><img onclick="document.getElementById('modal').style.display='block';document.getElementById('modal_img').src=this.src;" id="img3" src="./images/img3.jpg"></div>
+            <div class="grid-item"><img onclick="document.getElementById('modal').style.display='block';document.getElementById('modal_img').src=this.src;" id="img4" src="./images/img4.jpg"></div>
+            <div class="grid-item"><img onclick="document.getElementById('modal').style.display='block';document.getElementById('modal_img').src=this.src;" id="img5" src="./images/img5.jpg"></div>
+            <div class="grid-item"><img onclick="document.getElementById('modal').style.display='block';document.getElementById('modal_img').src=this.src;" id="img6" src="./images/img6.jpg"></div>
+            <div class="grid-item"><img onclick="document.getElementById('modal').style.display='block';document.getElementById('modal_img').src=this.src;" id="img1" src="./images/img1.jpg"></div>
+            <div class="grid-item"><img onclick="document.getElementById('modal').style.display='block';document.getElementById('modal_img').src=this.src;" id="img2" src="./images/img2.jpg"></div>
+            <div class="grid-item"><img onclick="document.getElementById('modal').style.display='block';document.getElementById('modal_img').src=this.src;" id="img3" src="./images/img3.jpg"></div>
+            <div class="grid-item"><img onclick="document.getElementById('modal').style.display='block';document.getElementById('modal_img').src=this.src;" id="img4" src="./images/img4.jpg"></div>
+            <div class="grid-item"><img onclick="document.getElementById('modal').style.display='block';document.getElementById('modal_img').src=this.src;" id="img5" src="./images/img5.jpg"></div>
+            <div class="grid-item"><img onclick="document.getElementById('modal').style.display='block';document.getElementById('modal_img').src=this.src;" id="img6" src="./images/img6.jpg"></div>
+            <div class="grid-item"><img onclick="document.getElementById('modal').style.display='block';document.getElementById('modal_img').src=this.src;" id="img1" src="./images/img1.jpg"></div>
+            <div class="grid-item"><img onclick="document.getElementById('modal').style.display='block';document.getElementById('modal_img').src=this.src;" id="img2" src="./images/img2.jpg"></div>
+            <div class="grid-item"><img onclick="document.getElementById('modal').style.display='block';document.getElementById('modal_img').src=this.src;" id="img3" src="./images/img3.jpg"></div>
+            <div class="grid-item"><img onclick="document.getElementById('modal').style.display='block';document.getElementById('modal_img').src=this.src;" id="img4" src="./images/img4.jpg"></div>
+            <div class="grid-item"><img onclick="document.getElementById('modal').style.display='block';document.getElementById('modal_img').src=this.src;" id="img5" src="./images/img5.jpg"></div>
+            <div class="grid-item"><img onclick="document.getElementById('modal').style.display='block';document.getElementById('modal_img').src=this.src;" id="img6" src="./images/img6.jpg"></div>
         </div>
-        <div id="banner" style="padding-left: 5px; padding-top: 40px;">
-            <div class="inline-block">
-                <img src="./images/img4.jpg">
-            </div>
-        
-            <div class="inline-block image">
-                <img src="./images/img5.jpg">
-            </div>
-        
-            <div class="inline-block image">
-                <img src="./images/img6.jpg">
-            </div>
+        <div id="modal" class="img_modal">
+            <img class="img" id="modal_img">
         </div>
+        <button id="top_button" class="top_button">Back To Top</button>
     </body>
+    <script>
+        var modal = document.getElementById('modal');
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        var top_button = document.getElementById("top_button");
+
+        top_button.onclick = function() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                top_button.style.display = "block";
+            } else {
+                top_button.style.display = "none";
+            }
+        };
+    </script>
 </html>
