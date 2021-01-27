@@ -14,23 +14,19 @@
             <h1 class="navbar-entry entry current"><a href="email.html">Email</a></h1>
         </div>
         <br>
-        <div style="padding-left:10px;">
-            <p>Email:</p>
-            <input type="text" id="email" name="email">
-            <button id="submit">Submit</button>
-        </div>
-        <!-- <form style="padding-left: 10px;">
+        <form style="padding-left: 10px;">
             <label for="fname">Email:</label><br>
             <input type="text" id="email" name="email"><br>
             <button id="submit">Submit</button>
-        </form> -->
+        </form>
         <p id="result"></p>
     </body>
     <script>
        var submit_button = document.getElementById("submit"); 
        var email = document.getElementById("email"); 
        var result = document.getElementById("result"); 
-       submit_button.onclick = function() {
+       submit_button.onclick = function(event) {
+           event.preventDefault()
             if (email.value.includes("@") && (email.value.includes(".com") || email.value.includes(".edu"))) {
                 result.innerHTML="Email is valid, contains @ and .com or .edu"; 
             }
